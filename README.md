@@ -4,6 +4,20 @@ Check the Olympics 2024 medal table from the comfort of your terminal.
 
 Data comes from <https://olympics.com/en/paris-2024/medals>.
 
+## Usage
+
+```bash
+# get the top 10 (default amount)
+medals
+
+# get the top 15
+medals 15
+```
+
+Examples:
+
+![Made with VHS](https://vhs.charm.sh/vhs-4m8XRluYAkwcrJfu4Q2lQf.gif)
+
 ## Dependencies
 
 - [curl](https://curl.se/): to get the data
@@ -30,17 +44,3 @@ mkdir -p ~/.local/bin
 curl 'https://raw.githubusercontent.com/meleu/medals.sh/main/medals.sh' > ~/.local/bin/medals
 chmod a+x ~/.local/bin/medals
 ```
-
-## Usage
-
-```bash
-# get the top 10 (default amount)
-medals
-
-# get the top 15
-medals 15
-```
-
-Examples:
-
-![Made with VHS](https://vhs.charm.sh/vhs-4m8XRluYAkwcrJfu4Q2lQf.gif)
