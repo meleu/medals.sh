@@ -94,12 +94,7 @@ renderMedalTable() {
   echo " rank |  🥇 |  🥈 |  🥉 | total | Country"
   echo "------|-----|-----|-----|-------|---------"
   while IFS= read -r line || [[ -n "${line}" ]]; do
-    gold="$(cut -d: -f1 <<< "$line")"
-    silver="$(cut -d: -f2 <<< "$line")"
-    bronze="$(cut -d: -f3 <<< "$line")"
-    total="$(cut -d: -f4 <<< "$line")"
-    country="$(cut -d: -f5 <<< "$line")"
-
+    IFS=':' read -r gold silver bronze total country <<< "$line"
     printf " %4s | %3s | %3s | %3s | %5s | %s\n" \
       "$((++rank))" "$gold" "$silver" "$bronze" "$total" "$country"
   done <<< "$medalTableData"
