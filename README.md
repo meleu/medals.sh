@@ -20,6 +20,7 @@ Examples:
 
 ## Dependencies
 
+- bash
 - [curl](https://curl.se/): to get the data
 - [htmlq](https://github.com/mgdm/htmlq): to parse contents from an HTML file
 - [jq](https://jqlang.github.io/jq): to parse JSON data
